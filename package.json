@@ -1,0 +1,35 @@
+{
+  "name": "resumefunnel-embed",
+  "version": "0.1.0",
+  "description": "Post Resume Funnel jobs and applications onto your own website",
+  "main": "embed.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prepublish": "coffee -c embed.coffee test/test.coffee",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/resumefunnel/embed.git"
+  },
+  "keywords": [
+    "ats",
+    "applicant tracking",
+    "hr",
+    "resumefunnel"
+  ],
+  "author": "Resume Funnel",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/resumefunnel/embed/issues"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.10.0",
+    "mocha": "~2.5.3"
+  },
+  "dependencies": {
+    "mustache": "~2.2.1"
+  }
+}

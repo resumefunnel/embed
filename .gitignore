@@ -1,0 +1,10 @@
+# editor files
+*.sw[op]
+
+# packages
+node_modules
+bower_components
+
+# products
+embed.js
+test/test.js

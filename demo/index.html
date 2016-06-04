@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Embed example | Resume Funnel</title>
+	</head>
+	<body>
+		<!-- An empty element to place job list -->
+		<div id="example-openings">
+		</div>
+
+		<!-- An empty element to place the application -->
+		<div id="example-application">
+		</div>
+
+		<!-- You can also add Mustache templates directly in your source code for generating the HTML -->
+		<script id="application-template" type="x-tmpl-mustache">
+			<h1>Apply for {{ job.title }}</h1>
+		</script>
+
+		<!-- Load dependencies -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+		<script type="text/javascript" src="../embed.js"></script>
+
+		<!-- Start Embed, load job applications -->
+		<script type="text/javascript">
+			var embed = new ResumeFunnel.Embed(1, "HLikZyDF98JhfTnPIEVmcCJkDex9RY1E");
+
+			// Retrieve all jobs
+			embed.getJobs(function(jobs){
+				jobs.populate(document.getElementById("example-openings"));
+			});
+			
+			// Retrieve a single job, with job ID #1
+			embed.getJob(1, function(job){
+				job.populate(document.getElementById("example-application"));
+			});
+		</script>
+	</body>
+</html>
